@@ -71,9 +71,7 @@ def time_sorting_algorithm(sort_func, products):
 def main():
     products = load_product_data('Assignment 1/product_data.txt')
 
-    # Perform operations as per the assignment requirements
-
-    # Insert a new product (example)
+    # Insert a new product
     new_product = Product('99501', 'Test Product', 99.99, 'Test Category')
     insert_product(products, new_product)
 
