@@ -69,7 +69,7 @@ def time_sorting_algorithm(sort_func, products):
     return end_time - start_time
 
 def main():
-    products = load_product_data('product_data.txt')
+    products = load_product_data('Assignment 1/product_data.txt')
 
     # Perform operations as per the assignment requirements
 
