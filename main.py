@@ -70,16 +70,24 @@ def time_sorting_algorithm(sort_func, products):
 
 def main():
     products = load_product_data('Assignment 1/product_data.txt')
-
+    #print(products)
+ 
     # Insert a new product
-    new_product = Product('99501', 'Test Product', 99.99, 'Test Category')
+    new_product = Product('99501', 'Test Product1', 99.99, 'Test Category')
     insert_product(products, new_product)
-
+    new_product = Product('99502', 'Test Product2', 199.99, 'Test Category')
+    insert_product(products, new_product)
+    new_product = Product('99503', 'Test Product3', 299.99, 'Test Category')
+    insert_product(products, new_product)
+ 
     # Update an existing product
     update_product(products, '40374', price=950.00)
+    update_product(products, '57353', price=950.00)
 
     # Delete a product
-    delete_product(products, '34863')
+    delete_product(products, '99501')
+    delete_product(products, '99502')
+    delete_product(products, '99503')
 
     # Search for a product by name
     search_results = search_product(products, 'name', 'Camera SBBHC')
@@ -95,13 +103,10 @@ def main():
     print("Measuring sorting times...")
     time_bubble_sorted = time_sorting_algorithm(bubble_sort, products[:])
     time_bubble_reverse = time_sorting_algorithm(bubble_sort, list(reversed(products)))
-    time_insertion_sorted = time_sorting_algorithm(insertion_sort, products[:])
-    time_insertion_reverse = time_sorting_algorithm(insertion_sort, list(reversed(products)))
+    
 
     print(f"Bubble Sort (sorted): {time_bubble_sorted:.10f} seconds")
     print(f"Bubble Sort (reverse): {time_bubble_reverse:.10f} seconds")
-    print(f"Insertion Sort (sorted): {time_insertion_sorted:.10f} seconds")
-    print(f"Insertion Sort (reverse): {time_insertion_reverse:.10f} seconds")
-
+ 
 if __name__ == "__main__":
     main()
