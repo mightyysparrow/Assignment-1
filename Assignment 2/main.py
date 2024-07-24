@@ -53,9 +53,14 @@ def play_sound_effect():
 
 # Main program
 if __name__ == "__main__":
-    # Product IDs
-    arr = [11, 1, 30, 2, 51, 6, 29, 7, 67, 15, 118, 4, 89, 23]
+    ''' 
+# Product IDs
+arr = [11, 1, 30, 2, 51, 6, 29, 7, 67, 15, 118, 4, 89, 23]
+    '''
     
+    user_input = input("Enter the numbers to sort, separated by spaces: ")
+    arr = list(map(int, user_input.split()))   
+
     print("Original array:")
     print_array(arr)
     
